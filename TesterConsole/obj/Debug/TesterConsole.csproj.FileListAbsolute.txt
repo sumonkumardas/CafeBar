@@ -1,0 +1,14 @@
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\TesterConsole.exe.config
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\TesterConsole.exe
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\TesterConsole.pdb
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\CafeBar.Entities.dll
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\EntityFramework.dll
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\EntityFramework.SqlServer.dll
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\MySql.Data.dll
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\CafeBar.Entities.pdb
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\EntityFramework.xml
+E:\voda er juice\CafeBar\TesterConsole\bin\Debug\EntityFramework.SqlServer.xml
+E:\voda er juice\CafeBar\TesterConsole\obj\Debug\TesterConsole.csprojResolveAssemblyReference.cache
+E:\voda er juice\CafeBar\TesterConsole\obj\Debug\TesterConsole.exe
+E:\voda er juice\CafeBar\TesterConsole\obj\Debug\TesterConsole.pdb
