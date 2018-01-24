@@ -19,7 +19,7 @@ namespace CafeBar.Data.Implementation
     
         public UserRepository()
         {
-            _connectionString = "Server=localhost;Port=3307;Database=cafebar;user id=root;password=1234;";
+            _connectionString = "Server=localhost;Port=3306;Database=cafebar;user id=root;password=1234;";
         }
         public User CheckLogin(LogInModel model)
         {

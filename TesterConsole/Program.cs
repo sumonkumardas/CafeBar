@@ -30,7 +30,7 @@ namespace TesterConsole
 
         public static void ExecuteExample()
         {
-            string connectionString = "Server=localhost;Port=3307;Database=cafebar;user id=root;password=1234;";
+            string connectionString = "Server=localhost;Port=3306;Database=cafebar;user id=root;password=1234;";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -60,7 +60,7 @@ namespace TesterConsole
 
                         //cars.Add(new Category { Name = "Nissan2" });
                        
-                        Console.WriteLine(context.Database.ExecuteSqlCommand(TransactionalBehavior.EnsureTransaction, "select * from categories"));
+                       // Console.WriteLine(context.Database.ExecuteSqlCommand(TransactionalBehavior.EnsureTransaction, "select * from categories"));
 
                        // context.SaveChanges();
                     }
