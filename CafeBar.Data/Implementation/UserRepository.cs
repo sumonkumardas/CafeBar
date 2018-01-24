@@ -25,6 +25,10 @@ namespace CafeBar.Data.Implementation
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
+                using (CafeBarContext contextDB = new CafeBarContext(connection, false))
+                {
+                    contextDB.Database.CreateIfNotExists();
+                }
                 connection.Open();
                 MySqlTransaction transaction = connection.BeginTransaction();
                 User user = null;
@@ -79,20 +83,22 @@ namespace CafeBar.Data.Implementation
 
                         //Interception / SQL logging
                         context.Database.Log = (string message) => { Console.WriteLine(message); };
-
+                        
                         //Passing an existing transaction to the context
                         context.Database.UseTransaction(transaction);
-
-                        context.UserSet.Add(new User()
+                        if (!context.UserSet.Any(x => x.Username == "admin"))
                         {
-                            DateCreated = DateTime.Now,
-                            IsLocked = false,
-                            HashedPassword = "123456",
-                            Email = "admin@put.com",
-                            Salt = "lobon",
-                            Username = "admin"
-                            
-                        });
+                            context.UserSet.Add(new User()
+                            {
+                                DateCreated = DateTime.Now,
+                                IsLocked = false,
+                                HashedPassword = "123456",
+                                Email = "admin@put.com",
+                                Salt = "lobon",
+                                Username = "admin"
+
+                            });
+                        }
 
                         context.SaveChanges();
                     }
