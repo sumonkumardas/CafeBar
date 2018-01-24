@@ -1,0 +1,133 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body data-ng-controller="body" class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="#/dashboard" class="logo">
+                <span class="logo-mini"><b>CB</b></span>
+                <span class="logo-lg"><b>Cafe</b> Bar</span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                
+                                
+                                <span class="hidden-xs">Alexander Pierce</span>
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header">
+                                    
+                                    <p>
+                                        
+                                        <span>Alexander Pierce - Web Developer</span>
+                                        
+                                        <small>Member since Jan. 2016</small>
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="@Url.Action("LogOut","Account")" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="treeview">
+                        <a href="/NewHome/Index#/newdashboard"><i class="fa fa-dashboard"></i> 
+                        <span>Site View</span></a>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#/dashboard" id="homedashboardCampViewLink">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Camp View<span id="campViewSiteName"></span></span>
+                           
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-down pull-right"></i>
+                            </span>
+                        </a>
+
+                        <ul class="treeview-menu">
+                            <li class="treeview">
+                                <a href="#/dashboard" id="homedashboardLink"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            </li>
+                           
+                            
+                                <li class="treeview">
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-pie-chart"></i>
+                                        <span>Admin</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-down pull-right"></i>
+                                        </span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                
+                        </ul>
+                    </li>
+
+                    
+
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <section data-ng-view=""></section>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 0.1
+            </div>
+            All rights
+            reserved.
+        </footer>
+        <div class="control-sidebar-bg"></div>
+    </div>
+
+    <style>
+    </style>
+
+
+
+    <script type="text/template" id="menu-item">
+        <li class="treeview-menu-item">
+            <div class="input-group">
+                <input class="form-control" type="text" />
+                <span class="input-group-btn">
+                    <button class="btn btn-save btn-sm btn-default">
+                        <i class="fa fa-check"></i>
+                    </button>
+                    <button class="btn btn-sm btn-cancel btn-default">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </span>
+            </div>
+        </li>
+
+
+
+    </script>
+
+    <script src="~/admin/2.3.6/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="~/admin/2.3.6/plugins/jquery-ui/jquery-ui.min.js"></script>
+   
+</body>
+</html>

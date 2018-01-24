@@ -1,0 +1,10 @@
+﻿.login-box, .register-box {
+    width: 400px;
+}
+
+.login-box-body, .register-box-body {
+    border-radius: 4px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 1px solid rgba(0,0,0,0.3);
+}

@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using CafeBar.Entities.Configuration;
 using MySql.Data.Entity;
+using MySql.Data.MySqlClient;
 
 namespace CafeBar.Entities.DBEntities
 {
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class CafeBarContext : DbContext
     {
+        private string ConnectionString { get; set; }
+
         public CafeBarContext()
             : base()
         {
@@ -37,6 +40,8 @@ namespace CafeBar.Entities.DBEntities
         #endregion
 
         
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 

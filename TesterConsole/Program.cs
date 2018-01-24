@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -54,13 +56,13 @@ namespace TesterConsole
                         context.Database.UseTransaction(transaction);
 
                         //DbSet.AddRange
-                        List<Category> cars = new List<Category>();
+                        // List<Category> cars = new List<Category>();
 
-                        cars.Add(new Category { Name = "Nissan2" });
+                        //cars.Add(new Category { Name = "Nissan2" });
+                       
+                        Console.WriteLine(context.Database.ExecuteSqlCommand(TransactionalBehavior.EnsureTransaction, "select * from categories"));
 
-                        context.CategorySet.AddRange(cars);
-
-                        context.SaveChanges();
+                       // context.SaveChanges();
                     }
 
                     transaction.Commit();
