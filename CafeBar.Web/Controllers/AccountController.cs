@@ -60,6 +60,21 @@ namespace CafeBar.Web.Controllers
 
         }
 
+        public ActionResult LogOut()
+        {
+            try
+            {
 
+                Session.Clear();
+                Session.Abandon();
+                FormsAuthentication.SignOut();
+                return RedirectToAction("LogIn", "Account");
+            }
+            catch (Exception exception)
+            {
+                return RedirectToAction("LogIn", "Account");
+            }
+
+        }
     }
 }
